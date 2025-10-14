@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <SDL3/SDL.h>
+#include "gfx.h"
+
+SDL_Window *gfx_init(GFX_WindowContext *ctx) {
+    /* defining ctx's window & renderer*/
+    SDL_Window *w = SDL_CreateWindow(ctx->name, ctx->width, ctx->height, ctx->flags);
+
+    /* NULL cuz SDL will choose the best rendering driver */
+    SDL_Renderer *r = SDL_CreateRenderer(w, NULL);
+
+    ctx->window = w;
+    ctx->renderer = r;
+
+    return w;
+}
+
+void gfx_draw() {
+
+}
+
+/* color being an array of uint8 values corresponding to rgba */
+void gfx_clear(GFX_WindowContext *ctx, Color c) {
+    SDL_SetRenderDrawColor(ctx->renderer, c.r * 255., c.g * 255., c.b * 255., c.a * 255.);
+    SDL_RenderClear(ctx->renderer);
+}
+
+void gfx_present(GFX_WindowContext *ctx) {
+    SDL_RenderPresent(ctx->renderer);
+}
+
+void gfx_quit(GFX_WindowContext *ctx) {
+    if (ctx->renderer) SDL_DestroyRenderer(ctx->renderer);
+    if (ctx->window) SDL_DestroyWindow(ctx->window);
+    SDL_Quit();
+}
+
+void gfx_set_color(GFX_WindowContext *ctx, Color c) {
+    SDL_SetRenderDrawColor(ctx->renderer, c.r * 255., c.g * 255., c.b * 255., c.a * 255.);
+}
+
+void gfx_draw_line(GFX_WindowContext *ctx, float x1, float y1, float x2, float y2) {
+    SDL_RenderLine(ctx->renderer, x1, y1, x2, y2);
+}

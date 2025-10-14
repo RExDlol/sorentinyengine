@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "stdlib.h": "c",
+        "stdio.h": "c",
+        "gfx.h": "c",
+        "sdl.h": "c",
+        "engine.h": "c",
+        "script.h": "c",
+        "input.h": "c"
+    }
+}
