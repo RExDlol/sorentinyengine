@@ -5,14 +5,12 @@
 /* the five forces of soren te (so rpg-y lol)*/
 #include "input.h"
 #include "gfx.h"
-#include "net.h"
-#include "physics.h"
-#include "script.h"
 
 /* add more later */
 typedef struct {
     INP_Context input;
     GFX_WindowContext gfx;
+    TIM_Context tim;
     // ecs context...
 
     int running;
