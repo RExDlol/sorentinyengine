@@ -12,6 +12,6 @@ typedef struct {
 } INP_Context;
 
 void input_update(INP_Context *input);
-bool key_pressed(INP_Context *input, SDL_Scancode key); 
+bool key_pressed(INP_Context *input, SDL_Scancode key);
 
 #endif
