@@ -5,6 +5,7 @@
 /* the five forces of soren te (so rpg-y lol)*/
 #include "input.h"
 #include "gfx.h"
+#include "tim.h"
 
 /* add more later */
 typedef struct {

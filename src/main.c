@@ -22,6 +22,10 @@ int main() {
 
     while (egn.running) {
         egn_update(&egn);
+        tim_update(&egn.tim);
+
+        float dt = egn.tim.delta;
+        
 
         Color c = {
             0.f, 0.f, 0.f, 0.f
@@ -30,9 +34,7 @@ int main() {
         gfx_clear(&gfx, col_white);
         gfx_set_color(&gfx, col_neon_blue);
 
-        if (egn.input.mouse_left || egn.input.mouse_right) {
-            printf("ele clicou com o mouse em!! (%d, %d)\n", egn.input.mouse_x, egn.input.mouse_y);
-        }
+        printf("%f\n", egn.tim.fps);
 
         gfx_draw_line(&gfx, 20, 20, 1000, 1000);
         gfx_present(&gfx);

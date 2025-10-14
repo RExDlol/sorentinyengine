@@ -3,7 +3,7 @@
 /* tim is an operator from brazil lol (time module in this proj ok) */
 
 void tim_init(TIM_Context *tim) {
-    tim->last_time = SDL_GetTicks64();
+    tim->last_time = SDL_GetTicks();
     tim->delta = 0.0f;
     tim->fps = 0.0f;
 }
