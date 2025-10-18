@@ -2,7 +2,7 @@
 #define ENGINE_H
 #include <SDL3/SDL.h>
 
-/* the five forces of soren te (so rpg-y lol)*/
+/* the three* forces of soren te (so rpg-y lol)*/
 #include "input.h"
 #include "gfx.h"
 #include "tim.h"

@@ -9,8 +9,9 @@ OBJ_DIR = obj
 
 # Compilador e flags
 CC = gcc
-CFLAGS = -I$(INC_DIR)
-LDFLAGS = -L$(LIB_DIR) -lSDL3
+CFLAGS = -I$(INC_DIR) -I$(INC_DIR)/SDL3 -I$(INC_DIR)/SDL3_ttf
+LDFLAGS = -L$(LIB_DIR) -lSDL3 -lSDL3_ttf -lfreetype
+
 
 # Lista de arquivos .c e .o
 SRCS = $(wildcard $(SRC_DIR)/*.c)

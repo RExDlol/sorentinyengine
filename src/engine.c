@@ -1,11 +1,16 @@
 #include "engine.h"
 
-/* gameloop funcs */
+
+
+/* starts some core things of the engine (required) */
 void egn_init(EGN_Context *ctx) {
     SDL_Init(SDL_INIT_VIDEO);
+    
+    input_init(&ctx->input);
+
     ctx->running = true;
 }
-
+/* gameloop func */
 void egn_update(EGN_Context *ctx) {
     input_update(&ctx->input);
 

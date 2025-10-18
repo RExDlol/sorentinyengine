@@ -6,6 +6,8 @@
         "sdl.h": "c",
         "engine.h": "c",
         "script.h": "c",
-        "input.h": "c"
+        "input.h": "c",
+        "util.h": "c",
+        "sdl_ttf.h": "c"
     }
 }

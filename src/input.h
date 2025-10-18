@@ -11,6 +11,7 @@ typedef struct {
     bool mouse_right;
 } INP_Context;
 
+void input_init(INP_Context *input);
 void input_update(INP_Context *input);
 bool key_pressed(INP_Context *input, SDL_Scancode key);
 

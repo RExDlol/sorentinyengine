@@ -1,5 +1,11 @@
 #include "input.h"
 
+
+void input_init(INP_Context *input) {
+    memset(input->keys, 0, sizeof(input->keys));
+    input->mouse_left = false;
+    input->mouse_right = false;
+}
 /* update of the input system */
 void input_update(INP_Context *input) {
     SDL_Event e;
